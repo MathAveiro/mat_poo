@@ -1,0 +1,21 @@
+package aula02;
+import java.util.Scanner;
+public class A02E03 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int valor;
+		double temp;
+		do {
+			System.out.print("Insira um valor inteiro positivo: ");
+			temp = sc.nextDouble();	
+		} while (temp != Math.round(temp) || temp < 0);
+		valor = (int)temp;
+		Boolean primo = true;
+		if (valor == 2) primo = true;
+		else for(int i = 2;i < valor; i++) if (valor % i == 0) primo = false;
+		if (primo) System.out.println("O número " + valor + " é primo!");  
+		else System.out.println("O número " + valor + " não é primo!"); 		
+		
+		sc.close();
+	}
+}

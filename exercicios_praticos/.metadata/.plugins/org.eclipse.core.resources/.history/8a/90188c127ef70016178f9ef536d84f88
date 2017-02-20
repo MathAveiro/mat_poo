@@ -1,0 +1,15 @@
+package aula02;
+import java.util.Scanner;
+public class A02E09 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Introduza o valor do tipo byte: ");
+		byte b = sc.nextByte();
+		int mask = 1 << 7, count = 0;
+		for	(int i = 1; i <= 8; i++) {
+			System.out.println((b & mask) == 0 ? '0' : '1');
+			b <<= 1;
+		}
+		sc.close();
+	}
+}

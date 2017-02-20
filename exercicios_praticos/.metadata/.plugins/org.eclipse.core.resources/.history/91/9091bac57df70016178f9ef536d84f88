@@ -1,0 +1,19 @@
+package aula02;
+import java.util.Scanner;
+public class A02E08 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.print("Introduza o valor do tipo byte: ");
+		byte b = sc.nextByte();
+		String a = Integer.toBinaryString(b);
+		System.out.println(a);
+		int mask = 1 << 7;
+		int count = 0;
+		for	(int i = 1; i <= 8; i++) {
+			if ((b & mask) != 0) count++;
+			b <<= 1;
+		}
+		System.out.println("Número de bits a '1': " + count);
+		sc.close();
+	}
+}

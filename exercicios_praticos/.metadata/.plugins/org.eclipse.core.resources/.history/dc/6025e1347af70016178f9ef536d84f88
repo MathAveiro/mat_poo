@@ -1,0 +1,16 @@
+package aula02;
+import java.util.Scanner;
+public class A02E01 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		double notaP, notaT, notaF;
+		System.out.print("Nota da componente prática (arredondado às décimas): ");
+		notaP = sc.nextDouble();
+		System.out.print("Nota da componente teórica (arredondado às décimas): ");
+		notaT = sc.nextDouble();
+		if (notaP < 7 || notaT < 7) notaF = 66;
+		else notaF = (notaP*0.6) + (notaT*0.4);
+		System.out.println("Nota final é: " + Math.round(notaF));
+		sc.close();
+	}
+}
